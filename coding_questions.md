@@ -19,6 +19,8 @@ Practice again. Not very familiar.
 
 ## 101. Symmetric Tree
 
+## 104. Maximum Depth of Binary Tree
+
 # TODO
 
 ## 146. LRU Cache
