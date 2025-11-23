@@ -9,6 +9,8 @@ Master DFS for now. Memorize both two pass and one pass.
 ## 432. All O`one Data Structure
 Very difficult. Memorize it.
 
+## 1004. Max Consecutive Ones III
+
 # TODO
 
 ## 146. LRU Cache
