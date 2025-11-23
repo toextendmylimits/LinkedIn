@@ -17,6 +17,8 @@ Don't remember to return when path length equal to digits count
 ## 46. Permutations
 Practice again. Not very familiar.
 
+## 101. Symmetric Tree
+
 # TODO
 
 ## 146. LRU Cache
