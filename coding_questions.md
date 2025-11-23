@@ -14,6 +14,9 @@ Very difficult. Memorize it.
 ## 17. Letter Combinations of a Phone Number
 Don't remember to return when path length equal to digits count
 
+## 46. Permutations
+Practice again. Not very familiar.
+
 # TODO
 
 ## 146. LRU Cache
