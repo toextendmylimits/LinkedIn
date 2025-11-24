@@ -28,3 +28,4 @@ Practice again. Not very familiar.
 ## 146. LRU Cache
 
 ## 716. Max Stack
+Difficult
