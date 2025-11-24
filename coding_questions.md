@@ -26,3 +26,5 @@ Practice again. Not very familiar.
 # TODO
 
 ## 146. LRU Cache
+
+## 716. Max Stack
