@@ -1,10 +1,14 @@
 # Coding Questions
 
 ## 339. Nested List Weight Sum
+### DFS
 I use a depth-first search helper function that takes a list and a current depth.  
 For each element:  
 • If it’s an integer, I add integer * depth to the sum.  
 • If it’s a nested list, I recursively process that list with depth + 1.  
+
+### BFS
+I use level-order BFS; each level corresponds to a depth, so I multiply integers by that depth and expand lists into the queue for the next level.”
 
 Master both DFS and BFS. Memorize answers.
 
