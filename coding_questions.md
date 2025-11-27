@@ -7,7 +7,16 @@ Master both DFS and BFS. Memorize answers.
 Master DFS for now. Memorize both two pass and one pass.
 
 ## 432. All O`one Data Structure
-Very difficult. Memorize it.
+“I maintain a doubly-linked list of frequency buckets.
+Each bucket holds all keys with that frequency.
+I also map each key to its current bucket.
+
+Increment moves the key to the next bucket (creating it if needed).
+Decrement moves it to the previous bucket (also creating if needed).
+
+If a bucket becomes empty, I remove it.
+The head holds the smallest frequency bucket, tail holds the largest.
+So min and max keys are O(1).”
 
 ## 205. Isomorphic Strings
 ## 1004. Max Consecutive Ones III
