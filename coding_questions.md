@@ -45,7 +45,7 @@ Practice again. Not very familiar.
 I store all positions of each word, then use a two-pointer scan over the two sorted index lists to compute the shortest distance in O(m+n) per query.”
 
 ## 243. Shortest Word Distance
-If the words differ, I track their last positions as I scan.
+I track the most recent positions of both words as I scan the list once. Every time I have valid positions for both, I update the minimum distance. This gives an O(N) one-pass O(1)-space solution.
 
 ## 245. Shortest Word Distance III
 If the words differ, I track their last positions as I scan.
