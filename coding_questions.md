@@ -15,6 +15,19 @@ Master both DFS and BFS. Memorize answers.
 ## 364. Nested List Weight Sum II
 Master DFS for now. Memorize both two pass and one pass.
 
+### DFS
+This problem weights integers based on maxDepth − depth + 1, so I need the maximum depth first.  
+
+I do two passes using DFS:  
+• In the first DFS, I traverse the entire structure to compute maxDepth.  
+• In the second DFS, I multiply each integer by its weight based on depth:  
+
+weight = maxDepth - depth + 1  
+
+DFS is ideal because it naturally tracks depth as it goes deeper into nested lists.  
+
+Time complexity is O(N) for both passes combined.  
+
 ### BFS
 I traverse the list level-by-level.
 I keep a runningSum of all integers seen so far.
