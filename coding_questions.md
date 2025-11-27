@@ -7,16 +7,25 @@ Master both DFS and BFS. Memorize answers.
 Master DFS for now. Memorize both two pass and one pass.
 
 ## 432. All O`one Data Structure
-“I maintain a doubly-linked list of frequency buckets.
-Each bucket holds all keys with that frequency.
-I also map each key to its current bucket.
+“I maintain a doubly-linked list of buckets sorted by frequency.
+Each bucket represents a frequency and contains all keys with that frequency.
 
-Increment moves the key to the next bucket (creating it if needed).
-Decrement moves it to the previous bucket (also creating if needed).
+I also keep a hash map from each key to its current bucket node.
 
-If a bucket becomes empty, I remove it.
-The head holds the smallest frequency bucket, tail holds the largest.
-So min and max keys are O(1).”
+inc(key) moves the key to the bucket with freq+1, which is always immediately to the right in the sorted list.
+
+dec(key) moves it to the bucket with freq-1, which is always immediately to the left.
+(Creating the bucket if it does not exist.)
+
+If a bucket becomes empty, I remove it, preserving a sorted list of frequencies.
+
+Because the list is always sorted:
+
+head.next always holds the minimum count
+
+tail.prev always holds the maximum count
+
+This gives O(1) for all operations, including getMinKey() and getMaxKey().”
 
 ## 205. Isomorphic Strings
 ## 1004. Max Consecutive Ones III
