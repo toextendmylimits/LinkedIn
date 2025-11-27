@@ -41,6 +41,16 @@ Practice again. Not very familiar.
 
 ## 235. Lowest Common Ancestor of a Binary Search Tree
 
+## 244. Shortest Word Distance II
+I store all positions of each word, then use a two-pointer scan over the two sorted index lists to compute the shortest distance in O(m+n) per query.”
+
+## 243. Shortest Word Distance
+If the words differ, I track their last positions as I scan.
+
+## 245. Shortest Word Distance III
+If the words differ, I track their last positions as I scan.
+If the words are the same, I track consecutive occurrences using previous_position. Both cases run in O(N) time.
+
 # TODO
 
 ## 146. LRU Cache
