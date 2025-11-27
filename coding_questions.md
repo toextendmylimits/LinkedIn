@@ -15,6 +15,12 @@ Master both DFS and BFS. Memorize answers.
 ## 364. Nested List Weight Sum II
 Master DFS for now. Memorize both two pass and one pass.
 
+### BFS
+I traverse the list level-by-level.
+I keep a runningSum of all integers seen so far.
+At each level, I add new integers into it, and then add that cumulative runningSum to the final result.
+This naturally gives larger weights to shallow levels because their values are included in the total more times.
+
 ## 432. All O`one Data Structure
 “I maintain a doubly-linked list of buckets sorted by frequency.
 Each bucket represents a frequency and contains all keys with that frequency.
