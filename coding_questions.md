@@ -90,6 +90,13 @@ Don't remember to return when path length equal to digits count
 ## 46. Permutations
 Practice again. Not very familiar.
 
+We generate all permutations using backtracking.  
+We build a permutation step by step, and at each step we choose any unused number.  
+We keep a used[] array to avoid reusing numbers.  
+When the path reaches length n, we copy it into the result.  
+After each recursive call, we undo the choice (pop + mark unused) to explore the next possibility.  
+This guarantees we explore all n! permutations.  
+
 ## 101. Symmetric Tree
 
 ## 104. Maximum Depth of Binary Tree
