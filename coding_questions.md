@@ -115,6 +115,14 @@ The first search finds the first position where the target appears by always mov
 The second search finds the last position by always moving right when we see the target.  
 Both searches run in O(log n), so the overall runtime is O(log n).  
 
+## 152. Maximum Product Subarray
+
+We track both the max and min product ending at each position. For each new number, we consider three choices:   
+the number itself, number × previous max, and number × previous min.   
+We include the number alone because sometimes it's better to start a new subarray,   
+especially after zeros or when previous products become worse than starting fresh.   
+Then we pick the best and worst of the three, update global max, and move on. This handles negatives and zeros correctly in O(n).  
+
 # TODO
 
 ## 146. LRU Cache
