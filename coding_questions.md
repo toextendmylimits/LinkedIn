@@ -55,6 +55,25 @@ tail.prev always holds the maximum count
 
 This gives O(1) for all operations, including getMinKey() and getMaxKey().”
 
+## 716. Max Stack
+
+### DLL + MAX HEAP
+I implement the stack as a doubly linked list, so I can push, pop, and  
+remove any specific node in O(1).  
+
+For tracking the maximum, I maintain a max-heap, where each entry stores  
+(-value, -sequenceId, nodePointer).  
+
+-value turns Python’s min-heap into a max-heap, and -sequenceId ensures  
+that among equal values, the most recently pushed element is chosen,  
+matching the “top-most max” requirement.  
+
+When a node is removed through the stack, I mark it as dead. The heap may  
+still contain stale entries, so peekMax and popMax lazily skip dead  
+nodes.  
+
+This gives O(1) top/pop and O(log n) push/popMax, satisfying the  
+
 ## 205. Isomorphic Strings
 ## 1004. Max Consecutive Ones III
 ## 17. Letter Combinations of a Phone Number
@@ -83,22 +102,5 @@ If the words are the same, I track consecutive occurrences using previous_positi
 
 ## 146. LRU Cache
 
-## 716. Max Stack
 
-### DLL + MAX HEAP
-I implement the stack as a doubly linked list, so I can push, pop, and  
-remove any specific node in O(1).  
-
-For tracking the maximum, I maintain a max-heap, where each entry stores  
-(-value, -sequenceId, nodePointer).  
-
--value turns Python’s min-heap into a max-heap, and -sequenceId ensures  
-that among equal values, the most recently pushed element is chosen,  
-matching the “top-most max” requirement.  
-
-When a node is removed through the stack, I mark it as dead. The heap may  
-still contain stale entries, so peekMax and popMax lazily skip dead  
-nodes.  
-
-This gives O(1) top/pop and O(log n) push/popMax, satisfying the  
 constraints.  
