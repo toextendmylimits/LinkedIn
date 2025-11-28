@@ -109,7 +109,7 @@ If the running total becomes negative, I reset it because it can’t help future
 While doing this, I track the best overall sum.  
 This gives a linear-time, constant-space solution.  
 
-## 
+## 34. Find First and Last Position of Element in Sorted Array 
 I use binary search twice.  
 The first search finds the first position where the target appears by always moving left when we see the target.  
 The second search finds the last position by always moving right when we see the target.  
