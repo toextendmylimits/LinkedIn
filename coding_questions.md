@@ -98,6 +98,12 @@ I track the most recent positions of both words as I scan the list once. Every t
 If the words differ, I track their last positions as I scan.
 If the words are the same, I track consecutive occurrences using previous_position. Both cases run in O(N) time.
 
+## 277. Find the Celebrity
+I first identify a single candidate by eliminating people who cannot be celebrities—anyone the candidate knows is automatically disqualified. After one linear pass, only one person can still be a celebrity. Then I verify that this person knows nobody and that everyone knows them. If both conditions hold, they are the celebrity; otherwise, there is none
+
+## 53. Maximum Subarray
+I use Kadane’s algorithm: as I scan the array, I keep the best subarray ending at each position, reset when the running sum turns negative, and track the highest sum overall. It runs in linear time and constant space.
+
 # TODO
 
 ## 146. LRU Cache
