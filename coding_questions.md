@@ -74,6 +74,14 @@ nodes.
 
 This gives O(1) top/pop and O(log n) push/popMax, satisfying the  
 
+## 146. LRU Cache
+I implement LRU Cache using two structures: a hash map and a doubly linked list.  
+The hash map gives O(1) access to nodes.  
+The linked list keeps keys ordered by recency—most recent at the head, least recent at the tail.  
+Whenever I get or update a key, I move its node to the head.  
+When inserting a new key and the cache is full, I evict the node at the tail, which is the least recently used.  
+This design guarantees O(1) get and put.  
+
 ## 205. Isomorphic Strings
 ## 1004. Max Consecutive Ones III
 ## 17. Letter Combinations of a Phone Number
@@ -121,7 +129,9 @@ We track both the max and min product ending at each position. For each new numb
 the number itself, number × previous max, and number × previous min.   
 We include the number alone because sometimes it's better to start a new subarray,   
 especially after zeros or when previous products become worse than starting fresh.   
-Then we pick the best and worst of the three, update global max, and move on. This handles negatives and zeros correctly in O(n).  
+Then we pick the best and worst of the three, update global max, and move on. This handles negatives and zeros correctly in O(n).
+
+
 
 # TODO
 
