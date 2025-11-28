@@ -148,6 +148,20 @@ Remove: swap the element with the last element, update the map, then pop it.
 GetRandom: choose a random element from values.  
 This makes insert, remove, and getRandom all O(1).  
 
+## 605. Can Place Flowers 
+We scan the flowerbed from left to right.  
+Whenever we see a 0, we check its left and right neighbors:  
+
+left is empty (or out of bounds), and  
+
+right is empty (or out of bounds)  
+
+→ we can plant a flower here. Set this position to 1 and reduce n by 1.  
+If n ever becomes 0, return true.  
+If we finish scanning and n > 0, return false.  
+
+This works in O(N) time and modifies the array in-place.  
+
 # TODO
 
 ## 146. LRU Cache
