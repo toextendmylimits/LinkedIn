@@ -131,7 +131,15 @@ We include the number alone because sometimes it's better to start a new subarra
 especially after zeros or when previous products become worse than starting fresh.   
 Then we pick the best and worst of the three, update global max, and move on. This handles negatives and zeros correctly in O(n).
 
+## 297. Serialize and Deserialize Binary Tree 
 
+I use preorder DFS to serialize the tree.  
+Every node is recorded as its value, and I use "x" for null pointers.  
+This sequence uniquely describes the tree because preorder always visits: node → left → right.  
+
+To deserialize, I read the values in order using an iterator.  
+Whenever I see "x" I return None; otherwise I create a node and recursively build its left and right subtrees.  
+Because serialize and deserialize follow the same preorder structure, the original tree is reconstructed exactly.  
 
 # TODO
 
