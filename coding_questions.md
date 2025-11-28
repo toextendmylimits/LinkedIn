@@ -169,6 +169,13 @@ If we finish scanning and n > 0, return false.
 
 This works in O(N) time and modifies the array in-place.  
 
+## 156. Binary Tree Upside Down
+
+I recursively go to the leftmost node, because that will become the new root.  
+Then when the recursion unwinds, I rewire the pointers:  
+The original left child’s left pointer becomes the original right child, and its right pointer becomes the original root.  
+Finally, I clear root.left and root.right so the structure doesn’t form cycles.  
+
 # TODO
 
 ## 146. LRU Cache
