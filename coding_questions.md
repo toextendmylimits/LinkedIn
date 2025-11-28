@@ -102,7 +102,12 @@ If the words are the same, I track consecutive occurrences using previous_positi
 I first identify a single candidate by eliminating people who cannot be celebrities—anyone the candidate knows is automatically disqualified. After one linear pass, only one person can still be a celebrity. Then I verify that this person knows nobody and that everyone knows them. If both conditions hold, they are the celebrity; otherwise, there is none
 
 ## 53. Maximum Subarray
-I use Kadane’s algorithm: as I scan the array, I keep the best subarray ending at each position, reset when the running sum turns negative, and track the highest sum overall. It runs in linear time and constant space.
+I use Kadane’s algorithm.  
+As I scan the array, I keep a running total for the best subarray ending at each position.  
+At every step, I choose whether to start a new subarray or continue the previous one.  
+If the running total becomes negative, I reset it because it can’t help future sums.  
+While doing this, I track the best overall sum.  
+This gives a linear-time, constant-space solution.  
 
 # TODO
 
