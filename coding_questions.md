@@ -141,6 +141,13 @@ To deserialize, I read the values in order using an iterator.
 Whenever I see "x" I return None; otherwise I create a node and recursively build its left and right subtrees.  
 Because serialize and deserialize follow the same preorder structure, the original tree is reconstructed exactly.  
 
+## 380. Insert Delete GetRandom O(1)  
+I use a list called values to store all elements, and a hash map index_map that maps each value to its index in the list.  
+Insert: append the element and record its index.  
+Remove: swap the element with the last element, update the map, then pop it.  
+GetRandom: choose a random element from values.  
+This makes insert, remove, and getRandom all O(1).  
+
 # TODO
 
 ## 146. LRU Cache
